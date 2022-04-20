@@ -1,0 +1,89 @@
+<html>
+    <head>JavaScript Tutorial</head> <!-- head tag-->
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+    let cars = ["bmw", "volvo", "honda"]; // the keyword 'let' indicate that array can be changed through out the program
+    document.getElementById("demo").innerHTML = cars; //the id created was ("demo") in the paranthesis.
+    // 'innerHTML' is responsible on what is being displayed on the web page. since id is demo, any changes made is reflected on this id and displayed on the web browser
+
+    //accessed array elements; the array element bmw was accessed through its position [0]
+    let bmw = cars[0]; //another variable bmw was created; cars[0]=bmw
+    document.getElementById("demo").innerHTML = bmw; //this displayed the variabel on the web browser
+
+    let volvo = cars[1];
+    document.getElementById("demo").innerHTML = volvo;
+
+    let honda = cars[2];
+    document.getElementById("demo").innerHTML = honda;
+
+    //array length property; this displayed the length of array
+
+    let len = cars.length; //variarable len;
+    document.getElementById("demo").innerHTML = len;
+
+    //accessed the last array element
+    let last = cars[cars.length -1]; //the length of the array is 3, 3-1 =2
+    document.getElementById("demo").innerHTML = last;
+
+    //loop over an array item; for loop was used
+    cars.forEach((item, index,array) => {console.log(item, index);});
+
+    //toString(): Converted an array into string
+    document.getElementById("demo").innerHTML = cars.toString();
+
+    //pop(): Removed the last element from an array
+    let last1 = cars.pop();
+    document.getElementById("demo").innerHTML = last1;
+    let last2 = cars[cars.length -1];
+    console.log(last2);
+
+
+    //push(): added a new element at the end of an array
+    cars.push("Audi");
+    document.getElementById("demo").innerHTML =cars;
+
+    //shift(): removed the first element from an array,
+    //this method shift all the elements, reducing the indexes of every element by one.
+    cars.shift();
+    document.getElementById("demo").innerHTML = cars;
+
+    //unshift(): added an element at the begining of an array
+    cars.unshift("Hyundai");
+    document.getElementById("demo").innerHTML = cars;
+
+    //concate(): created a new array by merging exiting arrays
+    let bikes = ["yamaha", "suzuki", "royal enfield"];
+    let vehicles = cars.concat(bikes);
+    document.getElementById("demo").innerHTML = vehicles;
+
+    //sort():Sorted an array in ascending order
+    vehicles.sort();
+    document.getElementById("demo").innerHTML = vehicles;
+
+    //reverse(): reversed the elements of an array
+    vehicles.reverse();
+    document.getElementById("demo").innerHTML = vehicles;
+
+    let num1 = [2, 3, 4, 5, 6, 7];
+    let num2 = num1.map(multiply); //defined a func multiply
+    function multiply(value){
+        return value *2; //this multipled each navy element of the array num1 by 2 and save the new element into the array num2
+    }
+    document.getElementById("demo").innerHTML = num2; //this displayed the content in the array num2
+
+    //filter() method takes each element in an array and it applies a conditional statement against it
+    let num3 = num1.filter(comp);
+    function comp(value){
+        return value>4;
+    }
+    document.getElementById("demo").innerHTML = num3;
+
+    //reduce() method: reduced an array of values down to just one value using a function, this method does not reduce the original array
+    let num4 = num1.reduce(sum)
+    function sum(total, value){
+        return total+value;
+    }
+    document.getElementById("demo").innerHTML = num4;
+</script></html>x
