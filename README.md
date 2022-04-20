@@ -1,0 +1,1 @@
+This is a my first javascript course on Simplilearn platform 
