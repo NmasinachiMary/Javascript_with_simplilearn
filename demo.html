@@ -4,7 +4,7 @@
     <p id="demo"></p>
 </body>
 <script>
-    let cars = ["bmw", "volvo", "honda"]; // the keyword 'let' indicate that array can be changed through out the program
+    let cars = ["bmw", "volvo", "honda", "4matic"]; // the keyword 'let' indicate that array can be changed through out the program
     document.getElementById("demo").innerHTML = cars; //the id created was ("demo") in the paranthesis.
     // 'innerHTML' is responsible on what is being displayed on the web page. since id is demo, any changes made is reflected on this id and displayed on the web browser
 
@@ -24,11 +24,11 @@
     document.getElementById("demo").innerHTML = len;
 
     //accessed the last array element
-    let last = cars[cars.length -1]; //the length of the array is 3, 3-1 =2
+    let last = cars[cars.length -1]; //the length of the array is 4, 4-1 =3
     document.getElementById("demo").innerHTML = last;
 
     //loop over an array item; for loop was used
-    cars.forEach((item, index,array) => {console.log(item, index);});
+    cars.forEach((item, index, array) => {console.log(item, index);});
 
     //toString(): Converted an array into string
     document.getElementById("demo").innerHTML = cars.toString();
@@ -39,9 +39,8 @@
     let last2 = cars[cars.length -1];
     console.log(last2);
 
-
     //push(): added a new element at the end of an array
-    cars.push("Audi");
+    cars.push("Audi", "Lexus");
     document.getElementById("demo").innerHTML =cars;
 
     //shift(): removed the first element from an array,
